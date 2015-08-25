@@ -28,7 +28,7 @@ public class Solution {
             // the longest common subsequence
             word1.stream().filter(uniq_chars::contains).collect(Collectors.toList());
             word2.stream().filter(uniq_chars::contains).collect(Collectors.toList());
-            // 4) After converting to each word to an array of shorts to save memory, pPerform Levenshtein edit distance
+            // 4) After converting to each word to an array of shorts to save memory, NW distance
             //    with no substitution. The value in the bottom right should be the answer
             Short[] word1_a = word1.toArray(new Short[word1.size()]), word2_a = word2.toArray(new Short[word2.size()]);
             System.out.println(NWScore(word1_a, word2_a));
